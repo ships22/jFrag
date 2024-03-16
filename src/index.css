@@ -20,6 +20,11 @@
   --clr-dark-navy-blue: #050a24;
   --clr-gold-black: #181010;
   --clr-red-hightlight: #eb1616;
+
+  /* padding */
+  --pd-base: 1.5em;
+  --pd-base-1: 1em;
+  --pd-base--half: 0.5em;
 }
 * {
   margin: 0;

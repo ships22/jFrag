@@ -1,12 +1,19 @@
+div.nav_container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 15;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
 nav {
   font-family: var(--ff-accent);
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
   margin-inline: auto;
-  padding: 1.5em;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid black;
+  padding: var(--pd-base);
+  z-index: 20;
+  backdrop-filter: blur(4px);
 }
 
 nav .logo {
@@ -16,11 +23,11 @@ nav .logo {
 
 ul.main_menu {
   display: flex;
-  /* gap: 2em; */
   text-transform: uppercase;
   place-items: center;
   -webkit-perspective: 1000px;
   perspective: 1000px;
+  z-index: 20;
 }
 
 section.util_menu {
@@ -160,9 +167,6 @@ li:nth-child(6) {
     width: 100dvw;
     margin-inline: auto;
     padding: 1em 1.5em;
-    position: fixed;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 1);
     grid-template-areas:
       'logo        util_menu'
       'main_menu   main_menu';
@@ -184,7 +188,7 @@ li:nth-child(6) {
     height: calc(100dvh - 57px);
     position: absolute;
     left: -1.5em;
-    backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(2px); */
   }
   nav .util_menu {
     grid-area: util_menu;
